@@ -1,0 +1,33 @@
+
+    html{
+        background: url('mountain.jpg');
+        background-color:#0C0C0C;
+        background-size: 1920px 1080px;
+        height:100%;
+        width:100%;
+
+    }
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+
+div{
+    position: relative;
+    top:-40%;
+    left: 40%;
+    width: 250px;
+    height: 80px;
+
+    border: 8px solid white;
+    font: bold 30px sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
