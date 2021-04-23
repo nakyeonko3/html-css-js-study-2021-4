@@ -1,0 +1,18 @@
+body {    
+    background: black url(1083607-nightmare-before-christmas-desktop-wallpaper-1920x1200-for-iphone-6.jpg) no-repeat top center fixed;
+    background-color: black;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.xmasDay_clock{
+    font: bold 30px cursive;
+    position: relative;
+    text-align: center;
+    top:-20%;
+
+}
