@@ -2,3 +2,7 @@
 Howls_Moving_Castle_HD_Wallpaper.jpg
 WinterNight.jpg
 winterNight2.jpg
+
+
+# Ignore all text files
+*.jpg
