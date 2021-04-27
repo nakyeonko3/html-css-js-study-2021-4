@@ -63,16 +63,22 @@ function init(){
 
 init();
 
+/*
+-----처리한 컴파일 오류---
+index.js:19 Uncaught TypeError: Cannot read property 'appendChild' of null
+    at paintToDo (index.js:19)
+    at HTMLFormElement.handleSubmit (index.js:36)
+원인: toDoList = document.querySelector(".js-toDoList"); 
+".js-toDoList"리고 적어서 버그터짐. "." 점 하나 적어서 dom객체를 제대로 받지 못했음 
 
-// -----처리한 컴파일 오류---
-// index.js:19 Uncaught TypeError: Cannot read property 'appendChild' of null
-//     at paintToDo (index.js:19)
-//     at HTMLFormElement.handleSubmit (index.js:36)
-// 원인: toDoList = document.querySelector(".js-toDoList"); 
-// ".js-toDoList"리고 적어서 버그터짐. "." 점 하나 적어서 dom객체를 제대로 받지 못했음 
 
+-----공부 내용 정리---
+localStorage는 stirng 값만 저장이 가능하다. 
+그래서 JSON.stringify를 사용해서 toDos 배열의 데이터를 string값으로 변환함
+JSON은 'JavaScript Object Notation'의 줄인말이다.
 
-// -----공부 내용 정리---
-//localStorage는 stirng 값만 저장이 가능하다. 
-//그래서 JSON.stringify를 사용해서 toDos 배열의 데이터를 string값으로 변환함
-//JSON은 'JavaScript Object Notation'의 줄인말이다.
+---의문점----
+1) 웹페이지에 localStorage를 삭제해도 toDo 배열이 삭제 되는게 아님,
+ toDo 배열은 새로고침하면 삭제됨. --> 해결됨
+ 
+ */
