@@ -10,7 +10,9 @@ body {
 }
 
 .xmasDay_clock{
-    font: bold 30px cursive;
+    font-family: sans-serif;
+    font-size: 25px;
+
     position: relative;
     text-align: center;
     top:-20%;

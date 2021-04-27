@@ -1,0 +1,33 @@
+body {
+    background-color: #ecf0f1;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+
+
+.clicked{
+    color: #7f8c8d;
+}
+
+.form,
+.greetings{
+    display: none;
+}
+
+.showing{
+    display: block;
+}
+
+.question{
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.change_{
+    
+    font-weight:bolder;
+
+}
