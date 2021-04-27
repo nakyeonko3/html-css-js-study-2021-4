@@ -12,8 +12,9 @@ const TODOS_LS = "toDos";
         delBtn.innerHTML = "❌";
         const span = document.createElement("span");
         span.innerText = text;
-        li.appendChild(span);
         li.appendChild(delBtn);
+        li.appendChild(span);
+        
         
         console.log(li);
         toDoList.appendChild(li);
