@@ -4,7 +4,22 @@ toDoList = document.querySelector(".js-toDoList");
 
 const TODOS_LS = "toDos";
 
-const toDos = [];
+let toDos = [];
+
+
+   
+function deleteToDo(event){
+        const btn = event.target;
+        const li = btn.parentNode;
+        toDoList.removeChild(li);
+        const cleanToDos = toDos.filter(function(toDos){
+            return toDos.id == parseInt(li.id); 
+        });// toDos.id에 저장되는 데이터의 자료형은 "정수형(int)"이다. li.id는 "문자형(String)"이다.
+
+       toDos = cleanToDos;
+       saveToDos();
+        
+    }
 
     function paintToDo(text) {
       
@@ -15,6 +30,7 @@ const toDos = [];
         const newId = toDos.length + 1;
   
         delBtn.innerHTML = "❌";
+        delBtn.addEventListener("click", deleteToDo);
         span.innerText = text;
         li.appendChild(delBtn);
         li.appendChild(span);
@@ -31,6 +47,7 @@ const toDos = [];
         saveToDos();
     }
     
+ 
    
 
 function saveToDos(){

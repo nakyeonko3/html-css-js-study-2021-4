@@ -33,6 +33,7 @@ function init() {
     country.addEventListener('change', handleSubmit);
 
     changeFont();
+    
 }
 
 init();

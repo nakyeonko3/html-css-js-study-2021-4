@@ -39,8 +39,6 @@ function paintGreeting(text) {
 }
 
 function init() {
-    const currentUser = localStorage.getItem(USER_LS);
-    console.log(currentUser);
 
     question.addEventListener("click", changeFont)
 
