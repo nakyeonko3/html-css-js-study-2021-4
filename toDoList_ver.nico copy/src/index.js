@@ -8,8 +8,7 @@ const TODOS_LS = "toDos";
 let toDos = [];
 let idNumbers = 1;
 
-let checkedToDos =[];
-let idNumbers_ =1;
+
    
 function deleteToDo(event){
     const btn = event.target;
