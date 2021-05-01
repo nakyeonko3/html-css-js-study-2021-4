@@ -7,9 +7,6 @@ const TODOS_LS = "toDos";
 
 let toDos = [];
 let idNumbers = 1;
-
-let checkedToDos =[];
-let idNumbers_ =1;
    
 function deleteToDo(event){
     const btn = event.target;
@@ -42,6 +39,7 @@ function deleteToDo(event){
         li.appendChild(span);
         li.id = newId;
         toDoList.appendChild(li);
+        
         const toDoObj = {
             text: text,
             id: newId
