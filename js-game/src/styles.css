@@ -1,0 +1,25 @@
+
+body {
+    height: 100vh;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    
+}
+
+
+h1 {
+    font:normal 100px sans-serif;
+    font-family: fantasy;
+}
+  
+.show{
+    display: flex;
+}
+
+.delete{
+    display: none;
+}
