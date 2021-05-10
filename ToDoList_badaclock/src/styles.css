@@ -1,0 +1,28 @@
+body{
+    background-color: wheat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-title{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+}
+
+.sub-title{
+    display: none;
+}
+
+.js-form{
+    display: block;
+}
+
+.delete{
+    display: none;
+}
+.show{
+    display: block;
+}
