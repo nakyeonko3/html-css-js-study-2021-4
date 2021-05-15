@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 45px;
+
+}
+
+.button{
+    background-color: tomato;
+}
+
+.button:hover{
+    background-color: wheat;
+}
+
+.ul{
+    color:wheat;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
