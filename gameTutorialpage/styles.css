@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    height: 100vh;
+    background-color: #FF6347;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    border: 4px solid black;
+    background-color: #F5DEB3;
+    width: 300px;
+    height: 300px;
+}
+
+.sub-div{
+    border: 4px solid white;
+    background-color:teal;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.second{
+    border: 4px dashed white;
+    width: 200px;
+    height: 60px;
+}
