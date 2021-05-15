@@ -9,9 +9,14 @@ const LIST_LS = "list_ls";
 let list_all = [];
 let list_id = 0;
 
-//  loadList();
- console.log(list_all);
+
+getLocalStorage();
+
+
+
+
 form.addEventListener("submit",handleSubmit);
+
 
 function handleSubmit(event){
     event.preventDefault();
@@ -48,35 +53,50 @@ function push_list_all(text) {
 function saveList(){
     console.log("wrong?");
     localStorage.setItem(LIST_LS, JSON.stringify(list_all));
-    // const list_all_sample = localStorage.getItem(LIST_LS);
-    // const sample = JSON.parse(list_all_sample);
-    // console.log(`${typeof(sample)}`);
-    // console.log(sample.length);
-  
+
+    
     
 }
 
-function loadList(){
-    const list_all_sample = localStorage.getItem(LIST_LS);
-    const sample = JSON.parse(list_all_sample);
-    console.log(sample);
-    list_all = sample;
-    // if(list_all.length > 0)
-    // {
-    //     printloadlist();
-    // }
-    // list_id = sample.length
-}
 
-function printloadlist() {
-    console.log(list_all[0].id,list_all[0].text, list_all.length);
-   
-        printListValue(list_all[0].text);
-        push_list_all(list_all[0].text);
+
+function getLocalStorage() {
+    let getList_all = JSON.parse(localStorage.getItem(LIST_LS));
+    console.log(typeof(getList_all) );
+    console.log(getList_all );
+
 
   
-    saveList();
+
+    
+    if(getList_all !== null)
+    {
+        list_all = getList_all;
+        console.log( list_all[0]);
+        list_all.forEach(element => {
+            printListValue(element.text)
+        });
+    }
+
+
+
+
 }
 
-// printListVlaue에서 버그 났음. innerText와 value의 차이를 알지 못함. 공부필요. 
-// creatElement는 html의 요소를 추가하는게 아니라 테그를 추가하는 것임
+
+
+/* 
+printListVlaue에서 버그 났음. innerText와 value의 차이를 알지 못함. 공부필요. 
+creatElement는 html의 요소를 추가하는게 아니라 테그를 추가하는 것임
+
+
+object나 array에 아무것도 없으면 아예 null 자료형이됨 이 null자료형은 어레이 취급을 못 받는다.
+!==
+ */
+
+/* 
+버그1
+: 오브젝트가 null이 되어서 null자료형으로 아에 변해버림, 어레이로는 절대 못쓰이는 건가?
+
+버그2
+: !==이거 기호를 모르고 있었음 */
