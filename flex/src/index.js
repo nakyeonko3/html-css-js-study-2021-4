@@ -1,8 +1,8 @@
 const h1 = document.querySelector("h1"),
 form = document.querySelector("form"),
 input = form.querySelector("input"),
-btn = document.querySelector("button");
 list = document.querySelector("ul");
+
 
 const LIST_LS = "list_ls";
 
@@ -12,11 +12,8 @@ let list_id = 0;
 
 getLocalStorage();
 
-
-
-
 form.addEventListener("submit",handleSubmit);
-
+btn.addEventListener("click", deleteList);
 
 function handleSubmit(event){
     event.preventDefault();
@@ -32,6 +29,8 @@ function printListValue(text) {
     const span = document.createElement("span");
     const btn  = document.createElement("button");
     const li = document.createElement("li");
+
+    btn.addEventListener("click", deleteList);
     span.innerText = text;
     btn.innerText = "❌";
     li.id = list_id++;
@@ -81,6 +80,10 @@ function getLocalStorage() {
 
 
 
+}
+
+function deleteList(event){
+    console.log(event);
 }
 
 
