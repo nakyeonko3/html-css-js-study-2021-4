@@ -1,0 +1,121 @@
+
+@keyframes anime1 {
+    form{
+        transform: rotateZ(0);
+    }
+    to{
+        transform: rotateZ(180deg);
+    }
+}
+
+
+
+@keyframes anime2 {
+    0%{
+        transform: rotateX(60deg);
+    }
+
+    30%{
+        transform: rotateX(60deg);
+    }
+   
+    50%{
+        transform: rotateX(0deg);
+    }
+
+    70%{
+        transform: rotateX(60deg);
+    }
+
+    100%{
+        transform: rotateX(60deg);
+    }
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.Box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    height: 850px;
+    width: 1200px;
+    background-color: #6BBCBE;
+    flex-direction: column;
+}
+
+.mini{
+    width: 300px;
+    height: 300px;
+ 
+   
+    margin: 8px;
+}
+
+.circle{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+   
+  
+    animation: anime1 1s ease-in-out infinite;
+   
+}
+
+
+.circles{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 30px;
+    background-color: white;
+}
+
+.colums{
+    background-color: white;
+    width: 20px;
+    height: 180px;
+    margin: 8px;
+    transform: rotateX(60deg);
+    animation: anime2 1s ease-in-out infinite;
+    /* transition: transform 1s ease-in-out; */
+}
+
+.pillar1{
+    animation-delay: 0s;
+}
+
+.pillar2{
+    animation-delay: 0.09s;
+}
+.pillar3{
+    animation-delay: 0.18s;
+}
+
+.pillar4{
+    animation-delay: 0.27s;
+}
+
+.pillar5{
+    animation-delay: 0.36s;
+}
+
+.pillar6{
+    animation-delay: 0.45s;
+}
+
+
+
+/* .colums:hover {
+    transform: rotateX(60deg);
+} */
